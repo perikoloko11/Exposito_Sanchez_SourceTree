@@ -81,3 +81,14 @@ listaAlumnos.set(i, alumno);
 }
 escribirAlumnos(listaAlumnos);
 }
+
+public Alumno buscarAlumnoPorDNI(String dni) {
+Alumno alumno = null;
+ArrayList<Alumno> listaAlumnos = leerAlumnos();
+for (int i = 0; i < listaAlumnos.size(); i++) {
+if (listaAlumnos.get(i).getDni().equalsIgnoreCase(dni)) {
+alumno = listaAlumnos.get(i);
+}
+}
+return alumno;
+}
